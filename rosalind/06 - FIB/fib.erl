@@ -19,6 +19,10 @@ fib(N, K) ->
     K*fib(N-2, K) + fib(N-1, K).
 
 %% Let's build from the ground up with this one. Much, much faster.
+fib2(1, _) ->
+    1;
+fib2(2, _) ->
+    1;
 fib2(N, K) ->
     fib2(3, N, K, 1, 1).
 
